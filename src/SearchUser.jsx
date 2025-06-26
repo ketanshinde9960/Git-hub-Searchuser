@@ -29,15 +29,14 @@ import { useState } from "react";
 
 //
 
+import PropTypes from "prop-types";
 
 const SearchUser = ({ onSearch }) => {
   const [username, setUsername] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("form submitted");
-    console.log(username);
-    onSearch(username); // ✅ Fixed: removed props
+    onSearch(username);
   };
 
   const handleChange = (event) => {
@@ -57,6 +56,11 @@ const SearchUser = ({ onSearch }) => {
       </form>
     </div>
   );
+};
+
+
+SearchUser.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default SearchUser;
