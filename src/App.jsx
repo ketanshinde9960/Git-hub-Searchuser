@@ -18,7 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>GitHub Card List</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+  GitHub Card List
+</h1>
      <SearchUser onSearch={searchUser} /> 
 
       <CardList profiles={profiles} />

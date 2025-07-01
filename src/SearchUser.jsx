@@ -51,8 +51,9 @@ const SearchUser = ({ onSearch }) => {
           value={username}
           onChange={handleChange}
           placeholder="Enter GitHub username"
+           style={{ fontSize: '18px' }}
         />
-        <button type="submit">Search User</button>
+        <button type="submit"  style={{ fontsize: '18px' }} >Search User </button>
       </form>
     </div>
   );
